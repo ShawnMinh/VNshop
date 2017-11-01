@@ -3,14 +3,21 @@ var router = express.Router();
 var mongoose = require('mongoose');
 
 var Goods = require('../models/goods');
+<<<<<<< HEAD
 var User = require('../models/user');
+=======
+>>>>>>> 72fc288cdafa2463a6d296a6faf5b6406d02e14b
 
 // 连接数据库
 // mongoose.connect('mongodb://47.93.231.75:27017/shop');
 mongoose.connect('mongodb://localhost:27017/shop');
 
 mongoose.connection.on('connected', function() {
+<<<<<<< HEAD
     console.log("Mongodb connected success");
+=======
+    console.log('sucess!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!');
+>>>>>>> 72fc288cdafa2463a6d296a6faf5b6406d02e14b
 })
 
 // 当连接发生错误的时候
@@ -20,6 +27,7 @@ mongoose.connection.on('error', function() {
 
 // 当关闭连接数据库的时候
 mongoose.connection.on('disconnected', function() {
+<<<<<<< HEAD
     console.log('Mongodb connected disconnected');
 })
 
@@ -83,12 +91,20 @@ router.get('/list', function(req, res, next) {
     goodsModel.sort({ 'salePrice': sort }).skip(skip).limit(pageSize);
 
     goodsModel.exec({}, function(err, doc) {
+=======
+    console.log('sucess!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!');
+})
+
+router.get('/', function(req, res, next) {
+    Goods.find({    }, function(err, doc) {
+>>>>>>> 72fc288cdafa2463a6d296a6faf5b6406d02e14b
         if (err) {
             res.json({ status: "1", msg: err.message })
         } else {
             res.json({ status: '0', msg: '', result: doc })
         }
     })
+<<<<<<< HEAD
 
 })
 
@@ -152,5 +168,21 @@ router.post('/addCart', function(req, res, next) {
     })
 
     // 然后保存在用户里面
+=======
+})
+
+router.get('/sortXXXX', function(req, res, next) {
+    let sort = req.param('sort');
+    let max = req.param('max');
+    let min = req.param('min');
+    Goods.find({salePrice: {$gte: min, $lte: max}}, function(err, doc) {
+        if (err) {
+            res.json({ status: "1", msg: err.message })
+        } else {
+            res.json({ status: '0', msg: '', result: doc })
+        }
+    }).sort({ 'salePrice': sort });
+
+>>>>>>> 72fc288cdafa2463a6d296a6faf5b6406d02e14b
 })
 module.exports = router;

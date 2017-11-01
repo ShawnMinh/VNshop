@@ -30,22 +30,33 @@
             <!-- <div class="container-user"> -->
             <div class="topbar-cart" id="ECS_CARTINFO">
                 <a class="cart-mini " href="flow.php">
+<<<<<<< HEAD
                     <!-- <i class="iconfont">&#xe60c;</i>  -->
                     <router-link to="/cart" class="iconfont">&#xe60c;购物车</router-link>
+=======
+                    <i class="iconfont">&#xe60c;</i> 购物车
+>>>>>>> 72fc288cdafa2463a6d296a6faf5b6406d02e14b
                     <span class="mini-cart-num J_cartNum" id="hd_cartnum">(0)</span>
                 </a>
             </div>
             <div class="topbar-info J_userInfo" id="ECS_MEMBERZONE">
+<<<<<<< HEAD
                 <span v-text="nickName" > </span>
                 <a class="link"  rel="nofollow" v-if="!nickName" @click="loginModalFlag = true">登录</a>
                 <span class="sep" v-if="nickName">|</span>
                 <a class="link" @click="logout" v-if="nickName" rel="nofollow">退出</a>
+=======
+                <a class="link" href="user.php" rel="nofollow">登录</a>
+                <span class="sep">|</span>
+                <a class="link" href="user.php?act=register" rel="nofollow">注册</a>
+>>>>>>> 72fc288cdafa2463a6d296a6faf5b6406d02e14b
             </div>
             <!-- </div> -->
         </div>
         <div id="J_navMenu" class="header-nav-menu" style="display: none;">
             <div class="container"></div>
         </div>
+<<<<<<< HEAD
 
 
         <!-- 登录框 -->
@@ -121,5 +132,12 @@
                 })
             }
         }
+=======
+    </div>
+</template>
+<script>
+    export default{
+
+>>>>>>> 72fc288cdafa2463a6d296a6faf5b6406d02e14b
     }
 </script>

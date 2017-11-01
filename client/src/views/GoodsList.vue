@@ -15,9 +15,24 @@
                 <div class="filter stopPop" id="filter">
                     <dl class="filter-price">
                         <dt>Price:</dt>
+<<<<<<< HEAD
                         <dd><a href="javascript:void(0)" :class="{'cur':priceChecked == 'all'}"  @click="setPriceFilter('all')">All</a></dd>
                         <dd v-for="(item,index) in priceFilter" :key="index" class="cur">
                             <a @click="setPriceFilter(index)" :class="{'cur': priceChecked == index}" href="javascript:void(0)">{{item.startPrice}} - {{item.endPrice}}</a>
+=======
+                        <dd><a href="javascript:void(0)" @click="sectionGoods(0,999999)">All</a></dd>
+                        <dd>
+                            <a href="javascript:void(0)" @click="sectionGoods(0,100)">0 - 100</a>
+                        </dd>
+                        <dd>
+                            <a href="javascript:void(0)" @click="sectionGoods(100,500)">100 - 500</a>
+                        </dd>
+                        <dd>
+                            <a href="javascript:void(0)" @click="sectionGoods(500,1000)">500 - 1000</a>
+                        </dd>
+                        <dd>
+                            <a href="javascript:void(0)" @click="sectionGoods(1000,2000)">1000 - 2000</a>
+>>>>>>> 72fc288cdafa2463a6d296a6faf5b6406d02e14b
                         </dd>
                     </dl>
                 </div>
@@ -34,6 +49,7 @@
                                     <div class="name">{{item.productName}}</div>
                                     <div class="price">{{item.salePrice}}</div>
                                     <div class="btn-area">
+<<<<<<< HEAD
                                         <a href="javascript:;" class="btn btn--m" @click="addCart(item.productId)">加入购物车</a>
                                     </div>
                                 </div>
@@ -41,6 +57,12 @@
                             <div v-infinite-scroll="loadMore" infinite-scroll-disabled="busy" infinite-scroll-distance="10">
                             ...
                             </div>
+=======
+                                        <a href="javascript:;" class="btn btn--m">加入购物车</a>
+                                    </div>
+                                </div>
+                            </li>
+>>>>>>> 72fc288cdafa2463a6d296a6faf5b6406d02e14b
                         </ul>
                     </div>
                 </div>
@@ -48,6 +70,7 @@
         </div>
     </div>
     <NavFooter/>
+<<<<<<< HEAD
     <!-- 在未登录的情况下 -->
     <modal :mdShow="mdShow">
         <p slot="message">请先登录，否则无法加入购物车</p>
@@ -65,6 +88,8 @@
         </div>
     </modal>
 
+=======
+>>>>>>> 72fc288cdafa2463a6d296a6faf5b6406d02e14b
   </div>
 </template>
 
@@ -72,7 +97,10 @@
     import NavHeader from '@/components/Header'
     import NavFooter from '@/components/Footer'
     import NavBread from '@/components/NavBread'
+<<<<<<< HEAD
     import Modal from '@/components/Modal'
+=======
+>>>>>>> 72fc288cdafa2463a6d296a6faf5b6406d02e14b
     import axios from 'axios'
     // import '../../static/css/base.css'
     // import '../../static/css/product.css'
@@ -80,12 +108,17 @@
         components:{
             NavHeader,
             NavFooter,
+<<<<<<< HEAD
             NavBread,
             Modal
+=======
+            NavBread
+>>>>>>> 72fc288cdafa2463a6d296a6faf5b6406d02e14b
         },
         data(){
             return {
                 goods:{},
+<<<<<<< HEAD
                 sortFlag:true,
                 priceChecked:'all',
                 data: [],
@@ -112,6 +145,11 @@
                         endPrice:'2000'
                     }
                 ]
+=======
+                lock:1,
+                max:99999,
+                min:0
+>>>>>>> 72fc288cdafa2463a6d296a6faf5b6406d02e14b
             }
         },
         created(){
@@ -119,6 +157,7 @@
         }
         ,
         methods:{
+<<<<<<< HEAD
             getGoodsList(flag){
                 let sort = this.sortFlag ? 1 : -1;
                 let param = {
@@ -170,6 +209,26 @@
                         this.mdShowCart = true;
                     }
                 })
+=======
+            getGoodsList(){
+                axios.get('/goods/sortXXXX',{params:{
+                    sort:this.lock,
+                    max:this.max,
+                    min:this.min
+                    }
+                }).then(res=>{
+                    this.goods = res.data.result;
+                })
+            },
+            sortGoods(){
+                this.lock = -this.lock;
+                this.getGoodsList();
+            },
+            sectionGoods(min,max){
+                this.min=min;
+                this.max=max;
+                this.getGoodsList();
+>>>>>>> 72fc288cdafa2463a6d296a6faf5b6406d02e14b
             }
         }
     }

@@ -4,6 +4,7 @@ import Vue from 'vue';
 import App from './App';
 import router from './router';
 import VueLazyload from 'vue-lazyload'
+<<<<<<< HEAD
 import infiniteScroll from 'vue-infinite-scroll'
 import apiConfig from '../config/api.config'
 
@@ -16,6 +17,9 @@ Axios.defaults.baseURL = apiConfig.baseUrl
 
 Vue.use(infiniteScroll)
 
+=======
+
+>>>>>>> 72fc288cdafa2463a6d296a6faf5b6406d02e14b
 Vue.use(VueLazyload, {
     // preLoad: 1.3,
     // error: 'dist/error.png',

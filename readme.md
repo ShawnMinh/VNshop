@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # vnshop 商城
 ## 项目架构
 前后分离
@@ -164,3 +165,15 @@ vnshop
 93 封装全局模态框组件.购物车判断登录与未登录情况的弹出不同模态框 
 94 在购物车列表页面去结账 
 95 .地址列表页面渲染
+=======
+### Vnshop
+created by vue and express who base on nodejs
+## usage
+```
+npm i
+npm run dev
+...
+npm i
+npm start 
+```
+>>>>>>> 72fc288cdafa2463a6d296a6faf5b6406d02e14b

@@ -1,5 +1,6 @@
 var express = require('express');
 var router = express.Router();
+<<<<<<< HEAD
 var User = require('../models/user');
 require('../util/util');
 
@@ -289,4 +290,12 @@ router.get('/orderDetail', function(req, res, next) {
     })
 })
 
+=======
+
+/* GET users listing. */
+router.get('/', function(req, res, next) {
+    res.send('there is superming');
+});
+
+>>>>>>> 72fc288cdafa2463a6d296a6faf5b6406d02e14b
 module.exports = router;

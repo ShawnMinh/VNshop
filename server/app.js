@@ -23,6 +23,7 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
+<<<<<<< HEAD
 app.use(function(req, res, next) {
     // console.log(1111);
     if (req.cookies.userId) {
@@ -45,6 +46,8 @@ app.use(function(req, res, next) {
 })
 
 
+=======
+>>>>>>> 72fc288cdafa2463a6d296a6faf5b6406d02e14b
 app.use('/', index);
 app.use('/users', users);
 app.use('/goods', goods);
