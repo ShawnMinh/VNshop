@@ -1,6 +1,6 @@
 #!/bin/bash
  
-WEB_PATH='/home/wwwroot/deploy-vnshop'
+WEB_PATH='/home/wwwroot/deploy'
 WEB_USER='root'
 WEB_USERGROUP='root'
  
