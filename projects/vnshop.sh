@@ -1,7 +1,7 @@
 #!/bin/bash
  
-WEB_PATH='/home/wwwroot/vnshop/'
-WEB_PATH_CLIENT='/home/wwwroot/omgwhatsthat.top/shop/client'
+WEB_PATH='/home/wwwroot/VNshop/'
+WEB_PATH_CLIENT='/home/wwwroot/VNshop/client'
 WEB_USER='www'
 WEB_USERGROUP='www'
 # we can do 
