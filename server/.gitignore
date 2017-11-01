@@ -1,13 +1,6 @@
 .DS_Store
 node_modules/
 dist/
-<<<<<<< HEAD
-npm-debug.log
-test/unit/coverage
-test/e2e/reports
-*.log
-logs/
-=======
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
@@ -22,4 +15,3 @@ selenium-debug.log
 *.ntvs*
 *.njsproj
 *.sln
->>>>>>> 8af89586230c6fc7ecae28f85aef966e7cd20ee1
