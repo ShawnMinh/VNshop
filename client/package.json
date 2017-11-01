@@ -74,11 +74,8 @@
     "sinon": "^4.0.0",
     "sinon-chai": "^2.8.0",
     "url-loader": "^0.5.8",
-<<<<<<< HEAD
     "vue-axios": "^2.0.2",
     "vue-infinite-scroll": "^2.0.2",
-=======
->>>>>>> 72fc288cdafa2463a6d296a6faf5b6406d02e14b
     "vue-lazyload": "^1.1.4",
     "vue-loader": "^13.3.0",
     "vue-style-loader": "^3.0.1",
