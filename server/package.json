@@ -1,5 +1,4 @@
 {
-<<<<<<< HEAD
     "name": "server",
     "version": "0.0.0",
     "private": true,
@@ -21,26 +20,4 @@
         "mongoose": "^4.12.4"
     }
 }
-=======
-  "name": "server",
-  "version": "0.0.0",
-  "private": true,
-  "scripts": {
-    "start": "node ./bin/www",
-    "sup": "supervisor ./bin/www",
-    "dev": "nodemon ./bin/www"
-  },
-  "dependencies": {
-    "body-parser": "~1.17.1",
-    "cookie-parser": "~1.4.3",
-    "debug": "~2.6.3",
-    "express": "~4.15.2",
-    "jade": "~1.11.0",
-    "morgan": "~1.8.1",
-    "serve-favicon": "~2.4.2"
-  },
-  "devDependencies": {
-    "mongoose": "^4.12.4"
-  }
-}
->>>>>>> 72fc288cdafa2463a6d296a6faf5b6406d02e14b
+
